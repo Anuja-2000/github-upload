@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/bootstrap/bootstrap.min.css';
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  color: dodgerblue;
+  text-align: center;
+}
+
+@font-face{
+  font-family: "shadow-brush";
+  src: local("shadow-brush"),url(./assets/fonts/Shadow-Brush.otf)format("opentype");
+}
+@font-face{
+  font-family: "travel-next";
+  src: local("travel-next"),url(./assets/fonts/Travel-Next.ttf)format("truetype");
+}
+

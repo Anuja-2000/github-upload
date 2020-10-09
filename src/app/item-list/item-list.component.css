@@ -1,0 +1,121 @@
+/* h2 {
+  color: lightgreen;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 150%;
+  margin-left: 1%;
+}
+.items {
+  list-style-type: none;
+}
+.items li {
+  width: fit-content;
+  position: relative;
+  background-color: lightblue;
+  height: 2em;
+  border-radius: 4px;
+  margin-top: 1em;
+}
+
+.items li:hover {
+  color: white;
+  background-color: rgb(134, 193, 212);
+  left: 0.3em;
+}
+.items .IdBadge {
+  display: inline-block;
+  background-color: chartreuse;
+  font-size: small;
+  color: darkgreen;
+  padding: 8px 7px 8px 7px;
+  line-height: 1em;
+  position: relative;
+  height: 2.5em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: 0.8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.items.name-badge {
+  height: 2em;
+  padding: 0 0 0 0;
+  line-height: 2em;
+}
+
+.items .price-badge {
+  background-color: rgb(117, 243, 195);
+  font-size: small;
+  color: darkgreen;
+  padding: 5.5px 3px 8px 3px;
+  min-width: 16px;
+  border-radius: 0 4px 4px 0;
+  margin: 0 0 0 5em;
+  position: relative;
+  height: 2.5em;
+
+}
+
+.editItem{
+  float: left;
+} */
+h4 {
+  margin-top: 5px;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(65, 65, 189);
+}
+.items {
+  list-style-type: none;
+}
+.items li {
+  display: -webkit-box;
+  margin-top: 12px;
+}
+.listItemContent {
+  display: inline-flex;
+  background-color: rgba(0, 172, 252, 0.096);
+  border-radius: 4px;
+  padding: 4px 3px 2px 3px;
+  justify-content: space-between;
+  width: 500px;
+}
+.deleteButton {
+  height: 0.8em;
+  width: 0.8em;
+  color: aliceblue;
+  background-color: rgb(209, 0, 0);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.ID-badge {
+  color: rgb(5, 141, 0);
+  margin: 0 4px 0 0;
+  padding: 0 0 0 0;
+}
+.name-badge {
+  color: rgb(0, 1, 75);
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.price-badge {
+  color: rgb(71, 0, 0);
+  margin: 0 4px 0 0;
+  padding: 0 0 0 0;
+}
+.list-item-options {
+  margin: -15px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.add-item {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(18, 112, 253);
+  text-decoration: none;
+  margin: 0 0 0 1%;
+  background-color: rgb(101, 255, 147);
+  border-radius: 4px;
+  padding: 5px 10px;
+  width: fit-content;
+}
+.add-item:hover {
+  background-color: rgb(183, 249, 253);
+}

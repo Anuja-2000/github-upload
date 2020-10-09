@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="main">
+    <h4>Item List</h4>
+    <div>
+      <ul class="items">
+        <li *ngFor="let item of itemList;let i = index">
+          <div class="listItemContent">
+            <div class="leftContent">
+              <label><span class="ID-badge font-weight-bold">{{i+1}}</span></label>
+              <label><span class="name-badge font-weight-bold">{{item.name}}</span></label>
+            </div>
+            <div class="rightContent">
+              <label><span class="price-badge font-weight-bold">{{item.price | number:'1.2-2'}}</span></label>
+            </div>
+          </div>
+          <div class="list-item-options">
+            <img (click)="deleteItem(item.id)" class="deleteButton"
+              src="https://icons.iconarchive.com/icons/hopstarter/rounded-square/96/Button-Delete-icon.png">
+            <img (click)="editItem(item)"
+              src="https://icons.iconarchive.com/icons/hopstarter/soft-scraps/128/Text-Edit-icon.png"
+              style="height: 0.8em; width: 0.8em;cursor: pointer;">
+          </div>
+        </li>
+      </ul>
+      
+    </div>
+    <nav class="add-item">
+      <a routerLink="/add-Item" style="text-decoration: none;">Add New Item</a>
+    </nav>
+  </div>
+</div>

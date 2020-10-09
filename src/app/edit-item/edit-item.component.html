@@ -1,0 +1,38 @@
+<!-- <h4 class="text-primary" >Edit Item Details</h4>
+<label class="text-success">Item Name :</label>
+<input [(ngModel)]="item.name" placeholder="name" class="form-control from-control-sm"/>
+<label class="text-success">Item Price :</label>
+<input (keyup.enter)="save()" [(ngModel)]="item.price" placeholder="price" class="form-control from-control-sm"/>
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col">
+      <button (click)="save()" class="btn btn-primary" >SAVE </button>
+    </div>
+    <div class="col">
+      <button (click)="back()" class="btn btn-success">Back</button>
+    </div>
+  </div>
+
+</div> -->
+<div class="custom-container">
+  <div class="main">
+    <h4>Edit Item Details...</h4>
+    <div class="edit-name">
+      <label
+        style="margin: 4px 9px 0 0;color: rgb(134, 92, 0);font-family: Georgia, 'Times New Roman', Times, serif;">Edit
+        Item Name :</label>
+      <input [(ngModel)]="item.name" placeholder="name" class="form-control from-control-sm" />
+    </div>
+    <div class="edit-price">
+      <label
+        style="margin: 4px 15px 0 0;color: rgb(134, 92, 0);font-family: Georgia, 'Times New Roman', Times, serif;">Edit
+        Item Price :</label>
+      <input (keyup.enter)="save()" [(ngModel)]="price" placeholder="price" class="form-control from-control-sm" />
+    </div>
+  </div>
+  <div class="buttons">
+    <button (click)="save()" class="button-save">SAVE </button>
+    <button (click)="back()" class="button-back">Back</button>
+  </div>
+</div>

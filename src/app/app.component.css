@@ -1,0 +1,11 @@
+.main{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(206, 255, 251);
+}
+.rightContent{
+  margin: 0px 0px 0 0 ;
+}
+.leftContent{
+  display: flex;
+}
