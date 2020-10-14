@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { AddCustomerComponent } from './add-customer/add-customer.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [AddCustomerComponent],
   imports: [
     CommonModule
   ]

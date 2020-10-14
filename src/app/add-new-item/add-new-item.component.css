@@ -4,10 +4,12 @@
 }
 .input-name{
   display: -webkit-box;
+  padding: 0 0 0 10px;
 }
 .input-price{
   display: -webkit-box;
   margin: 10px 0 0 0;
+  padding: 0 0 0 10px;
 }
 .buttons{
   margin-left: 95px;
@@ -19,7 +21,7 @@
   background-color: rgb(0, 110, 255);
   color: aliceblue;
   font-size: 14px;
-  padding: 4px 6px 4px 6px;
+  padding: 2px 8px 0px 8px;
 }
 .add-button:hover{
   background-color: rgb(1, 197, 211);
@@ -31,7 +33,7 @@
   background-color: rgb(101, 163, 0);
   color: aliceblue;
   font-size: 15px;
-  padding: 3px 6px 4px 6px;
+  padding: 2px 8px 0px 8px;
 }
 .back-button:hover{
   background-color: rgb(135, 245, 91);

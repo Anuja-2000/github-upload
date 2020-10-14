@@ -23,20 +23,29 @@
 </div> -->
 <div class="custom-container">
   <div class="main">
-    <h4 style="font-family: 'Times New Roman', Times, serif;margin-top: 5px;color: rgba(78, 156, 14, 0.904);">Add New
-      Item...</h4>
+    <h4 style="font-family: 'Times New Roman', Times, serif;margin-top: 5px;color: rgba(78, 156, 14, 0.904);">Add New Item...</h4>
     <div class="input-name">
-      <label style="padding: 5px 0 0 0;margin: 0 5px 0 0; color: rgb(0, 0, 184);">Enter Name :</label>
-      <input [(ngModel)]='item.name' type="text" class="form-control from-control-sm" placeholder="Enter Item Name...">
+      <!--      <label style="padding: 5px 0 0 0;margin: 0 5px 0 0; color: rgb(0, 0, 184);">Enter Name :</label>-->
+      <!--      <input [(ngModel)]='item.name' type="text" class="form-control from-control-sm" placeholder="Enter Item Name...">-->
+      <mat-form-field appearance="outline" style="width: 250px">
+        <mat-label>Enter Name</mat-label>
+        <input [(ngModel)]="item.name" matInput #message maxlength="50" placeholder="Enter Item Name">
+        <mat-hint align="end">{{message.value.length}}/50</mat-hint>
+      </mat-form-field>
     </div>
     <div class="input-price">
-      <label style="padding: 5px 0 0 0 ;margin: 0 13px 0 0;color: darkblue;">Enter Price :</label>
-      <input (keyup.enter)='keyBoardIsEnterKeypressed()' [(ngModel)]='item.price' type="text"
-        class="form-control from-control-sm" placeholder="Enter Item Price...">
+      <!--      <label style="padding: 5px 0 0 0 ;margin: 0 13px 0 0;color: darkblue;">Enter Price :</label>-->
+      <!--      <input (keyup.enter)='keyBoardIsEnterKeypressed()' [(ngModel)]='item.price' type="text"-->
+      <!--        class="form-control from-control-sm" placeholder="Enter Item Price...">-->
+      <mat-form-field appearance="outline" style="width: 250px">
+        <mat-label>Enter Price</mat-label>
+        <input (keyup.enter)="keyBoardIsEnterKeypressed()" [(ngModel)]="item.price" matInput #message maxlength="10" placeholder="Enter Item Price">
+        <mat-hint align="end">{{message.value.length}}/10</mat-hint>
+      </mat-form-field>
     </div>
     <div class="buttons">
-      <button (click)="addItem()" class="add-button" style="margin-right: 10px;">ADD ITEM</button>
-      <button (click)="goBack()" class="back-button">Back</button>
+      <button (click)="addItem()" class="add-button" style="margin-right: 10px;" mat-raised-button>ADD ITEM</button>
+      <button (click)="goBack()" class="back-button" mat-raised-button>Back</button>
     </div>
   </div>
 </div>
