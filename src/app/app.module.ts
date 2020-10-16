@@ -12,6 +12,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { DeleteItemDialogComponent } from './delete-item-dialog/delete-item-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { DeleteItemDialogComponent } from './delete-item-dialog/delete-item-dial
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

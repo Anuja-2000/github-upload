@@ -14,7 +14,7 @@
             </div>
           </div>
           <div class="list-item-options">
-            <img (click)="deleteItem(item.id)" class="deleteButton"
+            <img (click)="deleteItem(item.id,i+1)" class="deleteButton"
               src="https://icons.iconarchive.com/icons/hopstarter/rounded-square/96/Button-Delete-icon.png">
             <img (click)="editItem(item)"
               src="https://icons.iconarchive.com/icons/hopstarter/soft-scraps/128/Text-Edit-icon.png"
@@ -22,7 +22,7 @@
           </div>
         </li>
       </ul>
-      
+
     </div>
     <nav class="add-item">
       <a routerLink="/add-Item" style="text-decoration: none;">Add New Item</a>
