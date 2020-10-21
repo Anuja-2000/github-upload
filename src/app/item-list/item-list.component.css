@@ -58,7 +58,11 @@
 .editItem{
   float: left;
 } */
+.container{
+  padding: 60px 0 0 0;
+}
 h4 {
+  display: inline;
   margin-top: 5px;
   font-family: "Times New Roman", Times, serif;
   color: rgb(65, 65, 189);
@@ -119,3 +123,9 @@ h4 {
 .add-item:hover {
   background-color: rgb(183, 249, 253);
 }
+.fab-container{
+  display: flex;
+  justify-content: center;
+  margin: -35px 0 0 70px;
+}
+

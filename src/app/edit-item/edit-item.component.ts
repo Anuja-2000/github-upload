@@ -24,23 +24,23 @@ export class EditItemComponent implements OnInit {
     this.getItemForEdit();
     console.log(this.item);
   }
-  getItemForEdit() {
+  getItemForEdit(): void {
     this.index = Number(this.route.snapshot.paramMap.get('index'));
     this.itemService.getItem(this.index).subscribe((r) => {
       this.item = r;
       this.setCents();
     });
   }
-  save() {
+  save(): void {
     this.itemService
       .updateItemList(this.index, this.item.name, Number(this.price))
       .subscribe(() => this.router.navigateByUrl('/home'));
   }
-  back() {
+  back(): void {
     this.location.back();
   }
 
-  setCents(){
+  setCents(): void{
     this.price = this.item.price.toFixed(2);
   }
 

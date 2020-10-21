@@ -5,6 +5,7 @@ h4{
 .custom-container{
   display: inline-block;
   margin: 3px 0 0 26px;
+  padding: 15px 0 0 0;
 }
 .edit-name{
   display: -webkit-box;

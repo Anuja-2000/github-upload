@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
   background-color: rgb(206, 255, 251);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 .rightContent{
   margin: 0px 0px 0 0 ;

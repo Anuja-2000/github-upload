@@ -11,7 +11,7 @@ import { ItemsService } from '../items.service';
 })
 export class AddNewItemComponent implements OnInit {
   item: Item = {} as Item;
-  id: number = 0;
+  id = 0;
   itemListLength: number;
   constructor(
     private location: Location,
@@ -21,17 +21,11 @@ export class AddNewItemComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  addItem() {
+  addItem(): void {
     this.itemService.addItem(this.item).subscribe(() => this.router.navigateByUrl('/home') );
     // , () => this.router.navigateByUrl('/home')
   }
-
   goBack(): void {
     this.location.back();
-  }
-
-  keyBoardIsEnterKeypressed() {
-    this.addItem();
-    console.log('key up enter');
   }
 }

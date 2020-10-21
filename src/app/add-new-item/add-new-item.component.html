@@ -39,7 +39,7 @@
       <!--        class="form-control from-control-sm" placeholder="Enter Item Price...">-->
       <mat-form-field appearance="outline" style="width: 250px">
         <mat-label>Enter Price</mat-label>
-        <input (keyup.enter)="keyBoardIsEnterKeypressed()" [(ngModel)]="item.price" matInput #message maxlength="10" placeholder="Enter Item Price">
+        <input (keyup.enter)="addItem()" [(ngModel)]="item.price" matInput #message maxlength="10" placeholder="Enter Item Price">
         <mat-hint align="end">{{message.value.length}}/10</mat-hint>
       </mat-form-field>
     </div>

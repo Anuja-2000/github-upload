@@ -13,6 +13,7 @@ import {DeleteItemDialogComponent} from '../delete-item-dialog/delete-item-dialo
 export class ItemListComponent implements OnInit {
   itemList = [];
   index = 0;
+  total = 0;
   // confirmBoxResult = false;
   private dialogRef: MatDialogRef<DeleteItemDialogComponent>;
 
@@ -20,14 +21,18 @@ export class ItemListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getItems();
+    this.getItemList();
   }
 
-  getItems(): void {
+  getItemList(): void {
     this.itemService.getItemList().subscribe((r) => (this.itemList = r));
+    this.itemService.getTotal().subscribe(r => {
+      this.total = r;
+      console.log(r);
+    });
   }
 
-  deleteItem(id: number, index: number) {
+  deleteItem(id: number, index: number): void {
     // this.confirmBoxResult = confirm('Delete Selected Item!');
     // if (this.confirmBoxResult) {
     //   this.itemService.deleteItem(id).subscribe(() => window.location.reload());
@@ -39,14 +44,15 @@ export class ItemListComponent implements OnInit {
       });
     this.dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.itemService.deleteItem(id).subscribe(() => window.location.reload());
+        this.itemService.deleteItem(id).subscribe(() => this.getItemList());
       }
     });
   }
 
-  editItem(item: Item) {
+  editItem(item: Item): void{
     this.itemService.editItem(item);
     this.router.navigateByUrl('/edit-Item/' + item.id);
     // this.route.snapshot.paramMap.get('index')
   }
+
 }
