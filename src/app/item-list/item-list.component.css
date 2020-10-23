@@ -128,4 +128,37 @@ h4 {
   justify-content: center;
   margin: -35px 0 0 70px;
 }
+tr.option-row{
+  height: 0px;
+}
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
 
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+.options{
+  overflow: hidden;
+  display: flex;
+}
+.item-detail-row:hover{
+  background-color: #ececec;
+}
+.custom-spinner{
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+.custom-spinner ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #3fb53f;
+}
+.ripple-container{
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}

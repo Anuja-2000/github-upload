@@ -13,6 +13,7 @@ export class EditItemComponent implements OnInit {
   index = 0;
   item: Item = {} as Item;
   price = '';
+  quantity = '';
   constructor(
     private route: ActivatedRoute,
     private itemService: ItemsService,
@@ -33,7 +34,7 @@ export class EditItemComponent implements OnInit {
   }
   save(): void {
     this.itemService
-      .updateItemList(this.index, this.item.name, Number(this.price))
+      .updateItemList(this.index, this.item.name, Number(this.price), Number(this.quantity))
       .subscribe(() => this.router.navigateByUrl('/home'));
   }
   back(): void {
@@ -42,6 +43,7 @@ export class EditItemComponent implements OnInit {
 
   setCents(): void{
     this.price = this.item.price.toFixed(2);
+    this.quantity = this.item.quantity.toFixed(1);
   }
 
 }

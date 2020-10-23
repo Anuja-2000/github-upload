@@ -28,11 +28,20 @@
       </mat-form-field>
     </div>
     <div class="edit-price">
-<!--      <label style="margin: 4px 15px 0 0;color: rgb(134, 92, 0);font-family: Georgia, 'Times New Roman', Times, serif;">Edit Item Price :</label>-->
-<!--      <input (keyup.enter)="save()" [(ngModel)]="price" placeholder="price" class="form-control from-control-sm" />-->
+      <!--      <label style="margin: 4px 15px 0 0;color: rgb(134, 92, 0);font-family: Georgia, 'Times New Roman', Times, serif;">Edit Item Price :</label>-->
+      <!--      <input (keyup.enter)="save()" [(ngModel)]="price" placeholder="price" class="form-control from-control-sm" />-->
       <mat-form-field appearance="outline" style="width: 250px">
         <mat-label>Edit Price</mat-label>
         <input [(ngModel)]="price" matInput #input maxlength="10" placeholder="Enter Item Price">
+        <mat-hint align="end">{{input.value.length}}/10</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="edit-price">
+      <!--      <label style="margin: 4px 15px 0 0;color: rgb(134, 92, 0);font-family: Georgia, 'Times New Roman', Times, serif;">Edit Item Price :</label>-->
+      <!--      <input (keyup.enter)="save()" [(ngModel)]="price" placeholder="price" class="form-control from-control-sm" />-->
+      <mat-form-field appearance="outline" style="width: 250px">
+        <mat-label>Edit Quantity</mat-label>
+        <input (keyup.enter)="save()" [(ngModel)]="quantity" matInput #input maxlength="10" placeholder="Enter Quantity" type="number">
         <mat-hint align="end">{{input.value.length}}/10</mat-hint>
       </mat-form-field>
     </div>

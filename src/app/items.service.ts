@@ -10,15 +10,15 @@ import {map} from 'rxjs/operators';
 export class ItemsService {
   url = 'http://127.0.0.1:8080/shopping-List/';
   itemList: Item[] = [
-    {id: 1, name: 'Apple', price: 100.00},
-    {id: 2, name: 'Banana', price: 50.00},
-    {id: 3, name: 'Grapes', price: 150.00},
-    {id: 4, name: 'Fish', price: 250.00},
-    {id: 5, name: 'Vegetables', price: 550.00},
-    {id: 6, name: 'Milk', price: 300.00},
-    {id: 7, name: 'Chiken', price: 650.00},
-    {id: 8, name: 'Rice', price: 750.00},
-    {id: 9, name: 'Coconut', price: 1050.00},
+    {id: 1, name: 'Apple', price: 100.00, quantity: 0, total: 0},
+    {id: 2, name: 'Banana', price: 50.00, quantity: 0, total: 0},
+    {id: 3, name: 'Grapes', price: 150.00, quantity: 0, total: 0},
+    {id: 4, name: 'Fish', price: 250.00, quantity: 0, total: 0},
+    {id: 5, name: 'Vegetables', price: 550.00, quantity: 0, total: 0},
+    {id: 6, name: 'Milk', price: 300.00, quantity: 0, total: 0},
+    {id: 7, name: 'Chiken', price: 650.00, quantity: 0, total: 0},
+    {id: 8, name: 'Rice', price: 750.00, quantity: 0, total: 0},
+    {id: 9, name: 'Coconut', price: 1050.00, quantity: 0, total: 0},
   ];
   private item: Item;
 
@@ -32,7 +32,7 @@ export class ItemsService {
   }
 
   addItem(item: Item): Observable<Item> {
-    return this.http.post<Item>(this.url + 'add?name=' + item.name + '&price=' + item.price, {});
+    return this.http.post<Item>(this.url + 'add?name=' + item.name + '&price=' + item.price + '&quantity=' + item.quantity, {});
   }
 
   deleteItem(id: number): Observable <any> {
@@ -49,8 +49,8 @@ export class ItemsService {
   }
 
   // tslint:disable-next-line:typedef
-  updateItemList(index: number, name: string, price: number): Observable<any> {
-    return this.http.put(this.url + '/update-item?id=' + index + '&name=' + name + '&price=' + price, {});
+  updateItemList(index: number, name: string, price: number, quantity: number): Observable<any> {
+    return this.http.put(this.url + '/update-item?id=' + index + '&name=' + name + '&price=' + price + '&quantity=' + quantity, {});
   }
 
   getTotal(): Observable<number> {
